@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "768ba9b1-9502-4be5-80ae-423f41e9f836",
+		"name": "Job Seeker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38897854"
+	},
+	"item": [
+		{
+			"name": "availablePosition",
+			"item": [
+				{
+					"name": "addAvailablePosition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6IkhSRCIsImlhdCI6MTc1NjE2ODIxNiwiZXhwIjoxNzU2MjU0NjE2fQ.TiQ8gHjghInlK7A39Df5tOTgbkgbRx3AA7B2JGN_7ms",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"positionName\":\"masak ntol\",\r\n    \"capacity\":3,\r\n    \"description\":\"masak ntol bersama cak in\",\r\n    \"submissionStartDate\":\"2025-08-26\",\r\n    \"submissionEndDate\":\"2025-08-31\",\r\n    \"companyId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/available_position/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"available_position",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAvailablePosition",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsYW5kdUBnbWFpbC5jb20iLCJyb2xlIjoiU09DSUVUWSIsImlhdCI6MTc1NzI0MTg4MiwiZXhwIjoxNzU3MzI4MjgyfQ.e4tD_v0MsOn3zBfOAcfZjTLpKNVJYx3APZeOdTiRH_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/available_position/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"available_position",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAvailablePosition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"positionName\":\"kasir\",\r\n    \"capacity\":2,\r\n    \"description\":\"kasir cak in free ntol\",\r\n    \"submissionStartDate\":\"2025-08-25\",\r\n    \"submissionEndDate\":\"2025-08-30\",\r\n    \"companyId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/available_position/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"available_position",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAvailablePosition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"positionName\":\"kasir\",\r\n    \"capacity\":2,\r\n    \"description\":\"kasir cak in free ntol\",\r\n    \"submissionStartDate\":\"2025-08-25\",\r\n    \"submissionEndDate\":\"2025-08-30\",\r\n    \"companyId\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/available_position/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"available_position",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAPByCompanyFromHRD",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAvailablePositionById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAvailablePositionByCompany",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "registerCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Cak In\",\r\n  \"address\": \"kelabang\",\r\n  \"phone\": \"089876543210\",\r\n  \"description\": \"suwun cak ntolmu enak\",\r\n  \"email\": \"cakin@gmail.com\",\r\n  \"password\": \"cakingtg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editCompany",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6IkhSRCIsImlhdCI6MTc1NjcxMDM5MiwiZXhwIjoxNzU2Nzk2NzkyfQ.v9tzCDrAHagHNiGh-iiOu7mVQxmlPgGpDK63zopTeoA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Cak In\",\r\n    \"address\": \"Kelabang\",\r\n    \"phone\": \"089876543210\",\r\n    \"description\": \"bakso kuah pedes cak in\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "society",
+			"item": [
+				{
+					"name": "registerSociety",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"landu\",\r\n  \"address\": \"wagir\",\r\n  \"phone\": \"08123456789\",\r\n  \"dateOfBirth\": \"2000-05-17\", \r\n  \"gender\": \"Male\",\r\n  \"email\": \"landu@gmail.com\",\r\n  \"password\": \"landugtg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register/society",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register",
+								"society"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editSociety",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6IkhSRCIsImlhdCI6MTc1NjcxMDM5MiwiZXhwIjoxNzU2Nzk2NzkyfQ.v9tzCDrAHagHNiGh-iiOu7mVQxmlPgGpDK63zopTeoA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"gunnakam\",\r\n    \"address\": \"wagir\",\r\n    \"phone\": \"081234567890\",\r\n    \"dateOfBirth\": \"2008-10-05\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/society/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"society",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "portfolio",
+			"item": [
+				{
+					"name": "addPortfolio",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "editPortfolio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsYW5kdUBnbWFpbC5jb20iLCJyb2xlIjoiU09DSUVUWSIsImlhdCI6MTc1NzI0MTA4OCwiZXhwIjoxNzU3MzI3NDg4fQ.fiuewpSiMggl6PVdskINMZdlyeTC-ACtG9nD2mwyEzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/pandu/Downloads/CV.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/portfolio/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"portfolio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"cakin@gmail.com\",\r\n    \"password\":\"cakingtg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cakinToken",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

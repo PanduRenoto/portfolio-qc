@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "d6be50d4-5477-4850-9475-aebb88cfa2f1",
+		"name": "Fooder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38897854"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "oandu",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "oandu@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "oandugtg",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CASHIER",
+									"type": "text"
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/C:/Users/pandu/OneDrive/Pictures/Screenshots/Screenshot 2025-02-07 142411.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6Imd1bm5ha2FtIiwiZW1haWwiOiJndW5uYWthbUBnbWFpbC5jb20iLCJyb2xlIjoiTUFOQUdFUiJ9.-k1E8mPR8GPXbfMi7bgDnUTnrpy10Zl3Gmc9zWF47Ek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6Imd1bm5ha2FtIiwiZW1haWwiOiJndW5uYWthbUBnbWFpbC5jb20iLCJyb2xlIjoiTUFOQUdFUiJ9.-k1E8mPR8GPXbfMi7bgDnUTnrpy10Zl3Gmc9zWF47Ek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "AddMenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Orange Splash",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "DRINK",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Orange Splash adalah minuman segar berbasis jeruk yang biasanya memiliki rasa manis dan asam yang menyegarkan",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/C:/Users/pandu/Downloads/hamilton.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/menu/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"menu",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editMenu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/menu/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"menu",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMenu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6Imd1bm5ha2FtIiwiZW1haWwiOiJndW5uYWthbUBnbWFpbC5jb20iLCJyb2xlIjoiTUFOQUdFUiJ9.-k1E8mPR8GPXbfMi7bgDnUTnrpy10Zl3Gmc9zWF47Ek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/menu/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"menu",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gunnakam@gmail.com\",\r\n    \"password\": \"gunnakamgtg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
